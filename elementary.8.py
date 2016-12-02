@@ -7,6 +7,10 @@ def isPrime(number):
         return True # 2 & 3 are prime
     elif number % 2 == 0 or number % 3 == 0:
         return False
+    # the next section checks for divisors of the form 6k+-1
+    # i.e. 5, 7, 11, 13, 17, 19, 23, 25 and so on
+    # other numbers can be skipped because if they are divisors
+    # then 2 and/or 3 are also divisors
     else:
         divisor = 5
         while divisor ** 2 <= number: # divisors only upto sqrt of number
